@@ -73,6 +73,17 @@ You should see the node in `Ready` state and all system pods running.
 
 ---
 
+## Cleanup
+
+- Run the cleanup script to fully removes k3s runtime, state, and network leftovers without breaking Docker.
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-cloudspace/main/k3s-codespaces-cleanup.sh | bash
+```
+
+
+---
+
 ## What This Setup Is Good For
 
 * Learning Kubernetes fundamentals
