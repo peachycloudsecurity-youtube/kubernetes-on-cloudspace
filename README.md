@@ -18,6 +18,33 @@ This repository contains:
 The setup is intentionally simple so it works consistently in container-based development environments like Codespaces.
 
 ---
+## Installation
+
+- curl (recommended)
+  
+```bash
+curl -fsSL https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-cloudspace/main/k3s-codespaces-bootstrap.sh | bash
+```
+
+- wget
+
+```bash
+wget -qO- https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-cloudspace/main/k3s-codespaces-bootstrap.sh | bash
+```
+
+- Node.js
+
+```bash
+node -e "require('https').get('https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-cloudspace/main/k3s-codespaces-bootstrap.sh', r => r.pipe(require('child_process').spawn('bash',{stdio:['pipe','inherit','inherit']})))"
+```
+
+- Python
+
+```bash
+python3 -c "import urllib.request, subprocess; subprocess.run(['bash'], input=urllib.request.urlopen('https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-cloudspace/main/k3s-codespaces-bootstrap.sh').read(), check=True)"
+```
+
+---
 
 ## Quick Start (GitHub Codespaces)
 
