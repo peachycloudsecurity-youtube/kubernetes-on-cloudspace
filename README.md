@@ -1,6 +1,6 @@
 # Kubernetes on Codespace
 
-Hands-on Kubernetes lab environment designed to run inside **GitHub Codespaces**.
+Hands-on Kubernetes lab environment designed to run inside **GitHub codespaces**.
 This repository provides a simple and reliable way to bootstrap a local **k3s cluster** for learning, experimentation, and Kubernetes security labs.
 
 This project is part of the **PeachyCloudSecurity** learning ecosystem, focused on Cloud, DevSecOps, and Kubernetes Security education.
@@ -11,11 +11,11 @@ This project is part of the **PeachyCloudSecurity** learning ecosystem, focused 
 
 This repository contains:
 
-* A bootstrap script to install and start [**k3s**](https://k3s.io/) inside GitHub Codespaces
+* A bootstrap script to install and start [**k3s**](https://k3s.io/) inside GitHub codespaces
 * A minimal, clean setup that avoids systemd and rootless complexity
 * A foundation for extending into Kubernetes and cloud security labs
 
-The setup is intentionally simple so it works consistently in container-based development environments like Codespaces.
+The setup is intentionally simple so it works consistently in container-based development environments like codespaces.
 
 ---
 ## Installation
@@ -23,32 +23,32 @@ The setup is intentionally simple so it works consistently in container-based de
 - curl (recommended)
   
 ```bash
-curl -fsSL https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-Codespace/main/k3s-codespaces-bootstrap.sh | bash
+curl -fsSL https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-codespace/main/k3s-codespaces-bootstrap.sh | bash
 ```
 
 - wget
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-Codespace/main/k3s-codespaces-bootstrap.sh | bash
+wget -qO- https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-codespace/main/k3s-codespaces-bootstrap.sh | bash
 ```
 
 - Node.js
 
 ```bash
-node -e "require('https').get('https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-Codespace/main/k3s-codespaces-bootstrap.sh', r => r.pipe(require('child_process').spawn('bash',{stdio:['pipe','inherit','inherit']})))"
+node -e "require('https').get('https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-codespace/main/k3s-codespaces-bootstrap.sh', r => r.pipe(require('child_process').spawn('bash',{stdio:['pipe','inherit','inherit']})))"
 ```
 
 - Python
 
 ```bash
-python3 -c "import urllib.request, subprocess; subprocess.run(['bash'], input=urllib.request.urlopen('https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-Codespace/main/k3s-codespaces-bootstrap.sh').read(), check=True)"
+python3 -c "import urllib.request, subprocess; subprocess.run(['bash'], input=urllib.request.urlopen('https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-codespace/main/k3s-codespaces-bootstrap.sh').read(), check=True)"
 ```
 
 ---
 
-## Quick Start (GitHub Codespaces)
+## Quick Start (GitHub codespaces)
 
-1. Open this repository in a **GitHub Codespace**
+1. Open this repository in a **GitHub codespace**
 2. Run the bootstrap script:
 
 ```bash
@@ -78,7 +78,7 @@ You should see the node in `Ready` state and all system pods running.
 - Run the cleanup script to fully removes k3s runtime, state, and network leftovers without breaking Docker.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-Codespace/main/k3s-codespaces-cleanup.sh | bash
+curl -fsSL https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-codespace/main/k3s-codespaces-cleanup.sh | bash
 ```
 
 
@@ -87,7 +87,7 @@ curl -fsSL https://raw.githubusercontent.com/peachycloudsecurity-youtube/kuberne
 ## What This Setup Is Good For
 
 * Learning Kubernetes fundamentals
-* Running Kubernetes workloads in Codespaces
+* Running Kubernetes workloads in codespaces
 * Building and testing Kubernetes security labs
 * RBAC, networking, and pod security experiments
 * Workshop and demo environments
