@@ -23,25 +23,25 @@ The setup is intentionally simple so it works consistently in container-based de
 - curl (recommended)
   
 ```bash
-curl -fsSL https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-codespace/main/k3s-codespaces-bootstrap.sh | bash
+curl -fsSL https://raw.githubusercontent.com/peachycloudsecurity/kubernetes-on-codespace/main/k3s-codespaces-bootstrap.sh | bash
 ```
 
 - wget
 
 ```bash
-wget -qO- https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-codespace/main/k3s-codespaces-bootstrap.sh | bash
+wget -qO- https://raw.githubusercontent.com/peachycloudsecurity/kubernetes-on-codespace/main/k3s-codespaces-bootstrap.sh | bash
 ```
 
 - Node.js
 
 ```bash
-node -e "require('https').get('https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-codespace/main/k3s-codespaces-bootstrap.sh', r => r.pipe(require('child_process').spawn('bash',{stdio:['pipe','inherit','inherit']})))"
+node -e "require('https').get('https://raw.githubusercontent.com/peachycloudsecurity/kubernetes-on-codespace/main/k3s-codespaces-bootstrap.sh', r => r.pipe(require('child_process').spawn('bash',{stdio:['pipe','inherit','inherit']})))"
 ```
 
 - Python
 
 ```bash
-python3 -c "import urllib.request, subprocess; subprocess.run(['bash'], input=urllib.request.urlopen('https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-codespace/main/k3s-codespaces-bootstrap.sh').read(), check=True)"
+python3 -c "import urllib.request, subprocess; subprocess.run(['bash'], input=urllib.request.urlopen('https://raw.githubusercontent.com/peachycloudsecurity/kubernetes-on-codespace/main/k3s-codespaces-bootstrap.sh').read(), check=True)"
 ```
 
 ---
@@ -78,7 +78,7 @@ You should see the node in `Ready` state and all system pods running.
 - Run the cleanup script to fully removes k3s runtime, state, and network leftovers without breaking Docker.
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/peachycloudsecurity-youtube/kubernetes-on-codespace/main/k3s-codespaces-cleanup.sh | bash
+curl -fsSL https://raw.githubusercontent.com/peachycloudsecurity/kubernetes-on-codespace/main/k3s-codespaces-cleanup.sh | bash
 ```
 
 
